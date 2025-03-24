@@ -1,0 +1,42 @@
+/* Kypton Lantz
+  March 24, 2025
+  Module 3 - Assignment 2: GitHub Pages
+*/
+
+/* This is the CSS file for the index.html file. */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Crimson+Text&display=swap');
+
+body {
+  background-color: #1c1c1c;
+  font-family: 'Crimson Text', serif;
+  color: #e8d7b9;
+}
+
+h1, h2, h3, h4 {
+  background-color: #2e0f15;
+  color: #e8d7b9;
+  border: 1px solid #D6A800;
+  padding: 10px;
+  text-shadow: 2px 2px #000000;
+  font-family: 'Cinzel', serif;
+}
+
+#container {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* Anchor tag styling */
+a {
+  color: #b30059; /* Deep magenta/purple */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff003c; /* Bright blood red */
+}
+
+a:visited {
+  color: #800040; /* Dark wine */
+}
