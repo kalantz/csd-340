@@ -1,0 +1,60 @@
+/* Kypton Lantz
+  March 24, 2025
+  Module 3 - Assignment 3: Building a Web Page, Part 3
+  -- This is the CSS file for the lantz_Mod3.3.html file. -- 
+*/
+
+/* Centering Header */
+h1{
+  text-align: center;
+}
+
+/* Side-by-Side Divs */
+.side-by-side {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+.left-div, .right-div {
+  width: 45%;
+  border-radius: 15px;
+  padding: 10px;
+}
+.left-div {
+  border: 1px solid red;
+}
+.right-div {
+  border: 1px dashed red;
+
+}
+.left-div h3, .right-div h3 {
+  font-weight: 500;
+}
+ol, ul {
+  font-weight: 300;
+  list-style-position: inside; /* Keeps the numbers inside the border */
+}
+ul {
+  list-style-type: upper-roman;
+}
+
+/* Footer Styling */
+.last-div {
+  width: 100%;
+  margin-top: 60%;
+  text-align: right;
+  float: right;
+  margin-bottom: 20px;
+}
+
+/* Link styling */
+.back-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #007bff;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
