@@ -1,0 +1,75 @@
+<!--
+Kypton Lantz
+April 24, 2025
+Module 10 - Assignment 3: JavaScript Exercise, Part 2
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="author" content="Kypton Lantz">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="description" content="Part 2 of the building a web page assignment">
+    <link rel="stylesheet" type="text/css" href="lantz_Mod10_3.css">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <script>
+      function displayImage(imageFile, imageTitle) {
+        const mainImage = document.getElementById("mainImage");
+        const title = document.getElementById("imageTitle");
+    
+        // Fade out
+        mainImage.style.opacity = 0;
+        title.style.opacity = 0;
+    
+        // Wait for fade-out to complete before changing the image
+        setTimeout(() => {
+          mainImage.src = imageFile;
+          title.textContent = imageTitle;
+        }, 300); // match transition time
+    
+        // Fade back in after image has loaded
+        mainImage.onload = () => {
+          mainImage.style.opacity = 1;
+          title.style.opacity = 1;
+        };
+      }
+    </script>  
+</head>
+
+<body>
+  <div id="container">
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+    <p>Here are a few of my favorite pieces by Shawn Coss</p>
+    <p>Click a thumbnail to change the main image:</p>
+
+    <div class="thumbnail-container">
+      <div class="thumb">
+        <img src="Mod10_art/Aslowdeathcolor.jpg" alt="A Slow Death by Shawn Coss" onclick="displayImage('Mod10_art/Aslowdeathcolor.jpg', 'A Slow Death')">
+        <p>A Slow Death</p>
+      </div>
+      <div class="thumb">
+        <img src="Mod10_art/Necromancer.jpg" alt="Necromancer by Shawn Coss" onclick="displayImage('Mod10_art/Necromancer.jpg', 'Necromancer')">
+        <p>Necromancer</p>
+      </div>
+      <div class="thumb">
+        <img src="Mod10_art/Sense_of_Self.jpg" alt="Loss of Self by Shawn Coss" onclick="displayImage('Mod10_art/Sense_of_Self.jpg', 'Loss of Self')">
+        <p>Loss of Self</p>
+      </div>
+    </div>
+    
+    <div class="main-image-container">
+      <h2 id="imageTitle">Facehugger</h2>
+      <img id="mainImage" src="Mod10_art/facehugger.jpg" alt="Facehugger by Shawn Coss" class="mainImage">
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Lantz</p>
+    <p><a href="../index.html" class="back-link">Back to the Portal Page</a></p>
+  </footer>
+</body>
+</html>
