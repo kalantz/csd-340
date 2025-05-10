@@ -1,0 +1,79 @@
+<!--
+Kypton Lantz
+May 10, 2025
+Module 11 - Assignment 2: JavaScript Exercise, Part 3
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="author" content="Kypton Lantz">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="description" content="Part 3 of the building a web page assignment">
+    <link rel="stylesheet" type="text/css" href="lantz_Mod11_2.css">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <script>
+      let todoList = []; // Initialize an empty array to store the to-do items
+
+      //Function to add an item to the list
+      function addItem() {
+        let input = document.getElementById("todoInput").value.trim();
+        if (input != "") {
+          todoList.push(input);
+          alert("Item: " + input + " Added as Item " + todoList.length);
+          document.getElementById("todoInput").value = ""; // Clear the input field
+        } else {
+          alert("Please enter a task.");
+        }
+      }
+
+      //Function to delete the last item from the list
+      function deleteItem() {
+        if (todoList.length > 0) {
+          let removed = todoList.pop(); // Remove the last item from the array
+          alert("Deleted: " + removed);
+        } else {
+          alert("No items to delete.");
+        }
+      }
+
+      //Function to display the full list of items
+      function displayItems() {
+        let displayArea = document.getElementById("displayArea");
+        displayArea.innerHTML = ""; // Clear the display area
+        if (todoList.length === 0) {
+          displayArea.innerHTML = "<p>No items in the list.</p>";
+        } 
+        let list = "<ol>";
+        for (let i = 0; i < todoList.length; i++) {
+          list += "<li>" + todoList[i] + "</li>"; // Create a list item for each task
+        }
+        list += "</ol>";
+        displayArea.innerHTML = list; // Display the list in the display area
+      }
+    </script>  
+</head>
+
+<body>
+  <div id="container">
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <p>Enter a task in the box below, then use the buttons to add it to your list, remove the last entry, or display your full to-do list.</p>
+
+    <input type="text" id="todoInput" placeholder="Enter a task here...">
+    <br><br>
+    <button onclick="addItem()">Add</button>
+    <button onclick="deleteItem()">Delete Last Entry</button>
+    <button onclick="displayItems()">Display</button>
+
+    <div id="displayArea"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Lantz</p>
+    <p><a href="../index.html" class="back-link">Back to the Portal Page</a></p>
+  </footer>
+</body>
+</html>
