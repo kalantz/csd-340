@@ -1,0 +1,91 @@
+<!--
+Kypton Lantz
+May 14, 2025
+Module 12 - Assignment 2: JavaScript Exercise, Part 4
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="author" content="Kypton Lantz">
+    <link rel="stylesheet" type="text/css" href="lantz_Mod12_2.css">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <script>
+      const books = [
+        { position: 1, title: "Silence of the Lambs by Thomas Harris" },
+        { position: 2, title: "Dune by Frank Herbert" },
+        { position: 3, title: "Coraline by Neil Gaiman" },
+        { position: 4, title: "Hitchhikers Guide to the Galaxy by Douglas Adams" },
+        { position: 5, title: "Peter and the Starcatchers by Barry Pearson" },
+        { position: 6, title: "Fight Club by Chuck Palaniuk" },
+        { position: 7, title: "Relentless by Dean Koontz" },
+        { position: 8, title: "The Girl with the Dragon Tattoo by Stieg Larsson" },
+        { position: 9, title: "Dracula by Bram Stoker" },
+        { position: 10, title: "The Complete Tales and Poems of Edgar Allan Poe" }
+      ];
+
+      function displayTopToBottom() {
+        const list = document.getElementById("bookList");
+        list.innerHTML = ""; // Clear the list
+        books.forEach(book => {
+          const li = document.createElement("li");
+          li.textContent = `${book.position}. ${book.title}`;
+          list.appendChild(li);
+        });
+      }
+
+      function displayBottomToTop() {
+        const list = document.getElementById("bookList");
+        list.innerHTML = ""; // Clear the list
+        // Display reversed order, but keep the original position numbers
+        for (let i = books.length - 1; i >= 0; i--) {
+          const li = document.createElement("li");
+          li.textContent = `${books[i].position}. ${books[i].title}`;
+          list.appendChild(li);
+        }
+      }
+    </script>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+    <!-- Two side-by-side divs -->
+     <div class="side-by-side">
+      <!-- Left div -->
+       <div class="left-div">
+          <h3>Top 10 favorite Books</h3>
+
+          <!-- Buttons -->
+          <button onclick="displayTopToBottom()">Top to Bottom</button>
+          <button onclick="displayBottomToTop()">Bottom to Top</button>
+          <hr>
+
+          <!-- Book List Output -->
+          <ul id="bookList">
+       </div>
+
+        <!-- Right div -->
+         <div class="right-div">
+            <h3>5 Things I've Learned Since the Course Started</h3>
+            <ul>
+              <li>Understanding HTML and CSS structure better.</li>
+              <li>Improving my problem-solving skills when coding.</li>
+              <li>Learning about best practices in web development.</li>
+              <li>How to effectively use tools like Git and GitHub.</li>
+              <li>The importance of design principles for user experience.</li>
+            </ul>
+         </div>
+      </div>
+
+    <footer>
+      <p>&copy; 2025 Lantz</p>
+      <p><a href="../index.html" class="back-link">Back to the Portal Page</a></p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* Kypton Lantz
+  May 14, 2025
+  Module 12 - Assignment 2: JavaScript Exercise, Part 4
+  -- This is the CSS file for the lantz_Mod12_2.html file. -- 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Crimson+Text&display=swap');
+
+body {
+  background-color: #1c1c1c;
+  font-family: 'Crimson Text', serif;
+  color: #e8d7b9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Centering Header */
+h1, h3{
+  text-align: center;
+  background-color: #2e0f15;
+  color: #e8d7b9;
+  border: 1px solid #D6A800;
+  padding: 10px;
+  text-shadow: 2px 2px #000000;
+  font-family: 'Cinzel', serif;
+}
+
+/* Side-by-Side Divs */
+.side-by-side {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+.left-div, .right-div {
+  width: 45%;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #2e0f15;
+  border: 1px solid #D6A800;
+}
+.left-div h3, .right-div h3 {
+  font-weight: bold;
+  font-size: 18px;
+}
+.left-div {
+  border: 1px solid red;
+}
+.left-div button {
+  margin: 5px 10px 10px 0;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.right-div {
+  border: 1px dashed red;
+
+}
+ol, ul {
+  font-weight: 300;
+  list-style-position: inside;
+}
+ul {
+  list-style-type: upper-roman;
+}
+#bookList {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Button */
+.left-div button {
+  margin: 5px 10px 10px 0;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-family: 'Cinzel', serif;
+  background-color: #D6A800;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #1c1c1c;
+  font-weight: bold;
+}
+
+.left-div button:hover {
+  background-color: #b38f00;
+}
+
+/* Horizontal Line */
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 0;
+  border-top: 2px solid #D6A800;
+}
+
+/* Footer */
+footer {
+  background-color: #2e0f15;
+  border-top: 2px solid #D6A800;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+footer a {
+  color: #b30059;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ff003c;
+  text-decoration: underline;
+}
+
+footer a:visited {
+  color: #800040;
+}
